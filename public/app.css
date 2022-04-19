@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,300&family=Ranchers&display=swap');
+
 body {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
-  background-color: aquamarine;
+  background-color: black;
   margin: 0;
   font-size: 14px;
+}
+
+main {
+  padding: 30px;
+  min-height: 100vh;
 }
 
 nav {
@@ -107,4 +113,77 @@ div #nav-list {
 #nav-list a:hover {
   border-radius: 3px;
   background-color: #151725;
+}
+
+/* start of Main Content styling */
+h2 {
+  font-weight: bold;
+  color: #deb523;
+  font-size: 2rem;
+}
+
+h3 {
+  font-weight: normal;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.explore i {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+.explore i:hover {
+  color: #deb523;
+}
+
+/* start of footer styling */
+footer {
+  background-color: black;
+  color: white;
+  padding: 0.3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+div .social-media {
+  display: flex;
+  justify-content: center;
+  color: white
+}
+
+.social-media li {
+  list-style-type: none;
+  padding: 0.5rem 1.5rem;
+}
+
+.social-media i {
+color: white;
+}
+
+div .other-pages {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.other-pages li {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+}
+
+.other-pages a {
+  text-decoration: none;
+  color: white;
+}
+
+.other-pages a:hover {
+  text-decoration: underline;
 }
