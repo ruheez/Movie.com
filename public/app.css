@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,300&family=Ranchers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,500;0,700;1,400&family=Ranchers&display=swap');
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Archivo Narrow', sans-serif;
   box-sizing: border-box;
   background-color: black;
   margin: 0;
@@ -14,7 +14,7 @@ main {
 }
 
 nav {
-  background-color: black;
+  background-color: #141514;
   color: white;
   display: flex;
   align-items: center;
@@ -33,14 +33,15 @@ nav {
 }
 
 #imdb {
-  background-color: #decb23;
+  background-color: #f3ce13;
   color: black;
   font-family: 'Ranchers', cursive;
   border-radius: 3px;
   padding: 0.2rem 0.5rem;
   font-weight: 700;
   font-size: 1.5rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 1px;
+  align-self: center;
 }
 
 .menu button {
@@ -57,7 +58,7 @@ nav {
 }
 
 .menu button:hover {
-  background-color: #151725;
+  background-color: #252725;
 }
 
 .searchbar {
@@ -112,13 +113,89 @@ div #nav-list {
 
 #nav-list a:hover {
   border-radius: 3px;
-  background-color: #151725;
+  background-color: #252725;
+}
+/* start of hidden submenu */
+.submenu {
+  width: 100%;
+  padding: 3em 15em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border: 2px solid white;
+  background-color: black;
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.submenu-header{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  width: 70%;
+}
+
+.submenu-header #imdb {
+font-size: 2.1rem;
+border-radius: 5px;
+}
+
+.submenu-header button {
+  background-color: transparent;
+  border: none;
+}
+
+.submenu-header i {
+  color: #f3ce13;
+  font-size: 3rem;
+}
+
+.submenu-body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* padding: 0 5em; */
+  max-height: 120vh;
+  color: white;
+  width: 70%;
+}
+
+.submenu-body i {
+  background-color: transparent;
+  color: #f3ce13;
+  padding-right: 10px;
+}
+
+.submenu-list h2 {
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.submenu-list li {
+  list-style-type: none;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.submenu-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.submenu-list a:hover {
+  color: white;
+  text-decoration: underline;
 }
 
 /* start of Main Content styling */
 h2 {
   font-weight: bold;
-  color: #deb523;
+  color: #f3ce13;
   font-size: 2rem;
 }
 
