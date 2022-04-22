@@ -1,38 +1,82 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="/app.css">
-    <script src="https://kit.fontawesome.com/f82df14a80.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <%- include('partials/header')%>
-    <main>
-      <div class="">
-        <h2>Featured Today</h2>
-      </div>
-      <div class="">
-        <h2>Exclusive Videos</h2>
-      </div>
-      <div class="">
-        <h2>Explore what's streaming</h2>
-      </div>
-      <div class="">
-        <h2>Explore Movies & TV shows</h2>
-      </div>
-      <div class="explore">
-        <h2>More to explore</h2>
-        <div class="">
-          <h3>Editors picks <i class="fa-solid fa-angle-right"></i></h3>
-        </div>
-        <div class="">
-          <h3>Born today <i class="fa-solid fa-angle-right"></i></h3>
-        </div>
-        <div class="">
-          <h3>Top news <i class="fa-solid fa-angle-right"></i></h3>
+
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="/app.css">
+  <script src="https://kit.fontawesome.com/f82df14a80.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <%- include('partials/header')%>
+  <main>
+    <div class="featured">
+      <div class="featured-img">
+        <img src="/images/buzz.jpg" alt="">
+        <div class="featured-text">
+          <img src="/images/jumanji.jpg" alt="">
+          <button type="button" name="button"><i class="fa-solid fa-play"></i></button>
+          <h2>Space Ranger Buzz 'Lightyear'<br>Fights Aliens This Summer<span>Watch the New Trailer</span></h2>
         </div>
       </div>
+      <div class="upnext">
+        <h3>Up next</h2>
+        <div class="upnext-list">
+          <img src="/images/jumanji.jpg" alt="">
+          <div class="upnext-sublist">
+          <button type="button" name="button"><i class="fa-solid fa-play"></i></button>
+          <span> 0:00</span>
+          <h4>Space Ranger Buzz 'Lightyear' Fights Aliens This Summer</h3>
+            <p>Watch the New Trailer</p>
+          </div>
+        </div>
+        <div class="upnext-list">
+          <img src="/images/jumanji.jpg" alt="">
+          <div class="upnext-sublist">
+          <button type="button" name="button"><i class="fa-solid fa-play"></i></button>
+          <span> 0:00</span>
+          <h4>Space Ranger Buzz 'Lightyear' Fights Aliens This Summer</h3>
+            <p>Watch the New Trailer</p>
+          </div>
+        </div>
+        <div class="upnext-list">
+          <img src="/images/jumanji.jpg" alt="">
+          <div class="upnext-sublist">
+          <button type="button" name="button"><i class="fa-solid fa-play"></i></button>
+          <span> 0:00</span>
+          <h4>Space Ranger Buzz 'Lightyear' Fights Aliens This Summer</h3>
+            <p>Watch the New Trailer</p>
+          </div>
+        </div>
+        <a href="#" id="browse-trailers"><h3>Browse Trailers <i class="fa-solid fa-chevron-right"></i></h3></a>
+      </div>
+    </div>
+
+    <div class="">
+      <h2>Featured Today</h2>
+    </div>
+    <div class="">
+      <h2>Exclusive Videos</h2>
+    </div>
+    <div class="">
+      <h2>Explore what's streaming</h2>
+    </div>
+    <div class="">
+      <h2>Explore Movies & TV shows</h2>
+    </div>
+    <div class="explore">
+      <h2>More to explore</h2>
+      <div class="">
+        <h3>Editors picks <i class="fa-solid fa-angle-right"></i></h3>
+      </div>
+      <div class="">
+        <h3>Born today <i class="fa-solid fa-angle-right"></i></h3>
+      </div>
+      <div class="">
+        <h3>Top news <i class="fa-solid fa-angle-right"></i></h3>
+      </div>
+    </div>
     <h1>Home Page <%= 4+5 %></h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -43,5 +87,6 @@
 
   </main>
   <%- include('partials/footer')%>
-  </body>
+</body>
+
 </html>
