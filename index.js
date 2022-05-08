@@ -1,18 +1,24 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser')
 const path = require('path');
 const redditData = require('./data.json');
 
+// Static Files
 app.use(express.static(path.join(__dirname, '/public')));
+app.use('/img', express.static(__dirname + '/public/images'));
 
-//app.set accepts 2 params: key, value
-app.set('view engine', 'ejs');
+// Templating Engine
+// use app.set accepts 2 params: key, value
 app.set('views', path.join(__dirname, '/views'))
+app.set('view engine', 'ejs');
+
+// Parsing Middleware
+app.use(express.urlencoded({extended:true}))
 
 //to set the route to homepage
-app.get('/', (req, res) => {
-  res.render('home.ejs');
-})
+const homeRouter = require('./routes/scripts')
+app.use('/', homeRouter)
 
 app.get('/r/:subreddit', (req, res) => {
   const {subreddit} = req.params;

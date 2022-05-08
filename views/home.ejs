@@ -10,14 +10,15 @@
 
 <body>
   <%- include('partials/header')%>
-  <main>
+  <header>
     <div class="featured">
       <div class="featured-img">
         <img src="/images/buzz.jpg" alt="">
         <div class="featured-text">
-          <img src="/images/jumanji.jpg" alt="">
+          <img src="/images/jumanji.jp" alt="">
           <button type="button" name="button"><i class="fa-solid fa-play"></i></button>
-          <h2>Space Ranger Buzz 'Lightyear'<br>Fights Aliens This Summer<span>Watch the New Trailer</span></h2>
+          <h2>Space Ranger Buzz 'Lightyear'<br>Fights Aliens This Summer<br>
+            <span>Watch the New Trailer</span></h2>
         </div>
       </div>
       <div class="upnext">
@@ -52,19 +53,26 @@
         <a href="#" id="browse-trailers"><h3>Browse Trailers <i class="fa-solid fa-chevron-right"></i></h3></a>
       </div>
     </div>
+    </header>
 
-    <div class="">
+    <div class="explore">
       <h2>Featured Today</h2>
+      <div class="movieWrapper">
+      <% movies.forEach((movie) => { %>
+        <div class="indMovie">
+          <!-- imgPath should exported from scripts but i dont know how to work together with an express.router() -->
+          <% const imgPath = "https://image.tmdb.org/t/p/w1280" %>
+          <img src= "<%- imgPath + movie.poster_path %>" alt="">
+          <div class="movie-info">
+          <h3><%- movie.title %></h3>
+          <span><%- movie.vote_average %></span>
+          </div>
+          <button type="button" class="watchNow">Watch Now!</button>
+        </div>
+      <% }) %>
+      </div>
     </div>
-    <div class="">
-      <h2>Exclusive Videos</h2>
-    </div>
-    <div class="">
-      <h2>Explore what's streaming</h2>
-    </div>
-    <div class="">
-      <h2>Explore Movies & TV shows</h2>
-    </div>
+
     <div class="explore">
       <h2>More to explore</h2>
       <div class="">
@@ -77,15 +85,8 @@
         <h3>Top news <i class="fa-solid fa-angle-right"></i></h3>
       </div>
     </div>
-    <h1>Home Page <%= 4+5 %></h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-      aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-      occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-  </main>
+
   <%- include('partials/footer')%>
 </body>
 

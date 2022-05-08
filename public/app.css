@@ -189,10 +189,10 @@ border-radius: 5px;
   text-decoration: underline;
 }
 /* end of navbar styling */
-/* start of Main Content styling */
+/* start of Header Content styling */
 
-main {
-  padding: 10px 3rem;
+header {
+  padding: 1rem 3rem;
   min-height: 100vh;
 }
 
@@ -204,7 +204,6 @@ main {
 
 .featured-img {
   min-width: 60%;
-  border: 1px solid white;
   position: relative;
 }
 
@@ -217,29 +216,42 @@ main {
 .featured-text {
   display: flex;
   align-items: flex-end;
+  gap: 1rem;
   z-index: 1;
   position: absolute;
-  bottom: 0;
+  bottom: 10%;
   color: white;
   padding: 0 10px;
 }
 
 .featured-text img {
   object-fit: cover;
-  width: 200px;
+  width: 170px;
   height: auto;
+}
+
+.featured-text h2 {
+  color: white;
+}
+
+.featured-text span {
+  font-size: 1.5rem;
+  color: grey;
+  font-weight: lighter;
 }
 
 .featured-text button {
   background-color: transparent;
-  color: white;
-  border: 1px solid white;
+  border: 3px solid white;
   border-radius: 50%;
-  padding: 8px 10px;
+  padding: 1.4rem 1.5rem;
+  margin-bottom: 4.5rem;
 }
 
-.upnext {
-  border: 1px solid white;
+.featured-text i {
+  background-color: transparent;
+  color: white;
+  font-size: 1.5rem;
 }
 
 .upnext h3 {
@@ -305,25 +317,67 @@ main {
 }
 /* end of featured div styling */
 
-main h2 {
+header h2 {
   font-weight: bold;
   color: #f3ce13;
   font-size: 2rem;
 }
 
-main h3 {
+header h3 {
   font-weight: normal;
   color: white;
   font-size: 1.5rem;
 }
 
-.explore i {
-  margin-left: 10px;
-  font-size: 1rem;
+
+
+/* start of movies data */
+.explore {
+  padding: 0 3rem;
+  margin: 0;
 }
 
-.explore i:hover {
+.explore h2 {
   color: #deb523;
+  font-size: 2.5rem;
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.movieWrapper {
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.indMovie {
+  min-width: 280px;
+  height: auto;
+  background-color: #141514;
+  border-radius: 3px;
+  padding-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.indMovie img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.watchNow {
+  padding: 5px 2rem;
+  color: #06b3ee;
+  background-color: #252725;
+  display: block;
+  margin: auto;
+  border-radius: 3px;
+  border: none;
 }
 
 /* start of footer styling */
